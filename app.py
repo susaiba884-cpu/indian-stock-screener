@@ -8,6 +8,14 @@ st.set_page_config(page_title="Live Indian Stock Screener", page_icon="📈", la
 st.title("📈 Live Indian Stock Screener")
 st.caption("Big-Screener-style Indian equity screener using publicly available market data. Unavailable metrics are left blank.")
 
+st.markdown("### 🚀 Next-Day Trading Tools")
+c1, c2 = st.columns(2)
+with c1:
+    st.page_link("pages/2_Next_Day_Momentum.py", label="🚀 Open Next-Day Momentum Scanner", icon="🚀", use_container_width=True)
+with c2:
+    st.page_link("pages/1_Next_Day_Backtest.py", label="🧪 Open Next-Day Backtest", icon="🧪", use_container_width=True)
+st.caption("The momentum scanner ranks technical setups for the next trading day. It is a screening tool, not a guaranteed price prediction.")
+
 FILTERS = {
     "Price & Size": [("Price (₹)","price"),("Market Cap (₹ Cr)","market_cap_cr"),("Enterprise Value (₹ Cr)","enterprise_value_cr"),("Beta","beta"),("52W High Distance (%)","dist_52w_high"),("52W Low Distance (%)","dist_52w_low")],
     "Profitability": [("Net Profit (₹ Cr)","net_profit_cr"),("Profit Margin (%)","profit_margin"),("Operating Margin (%)","operating_margin"),("EBITDA Margin (%)","ebitda_margin"),("ROE (%)","roe"),("ROE 5Y Avg (%)","roe_5y"),("ROCE (%)","roce"),("ROCE 5Y Avg (%)","roce_5y"),("ROA (%)","roa"),("ROIC (%)","roic")],
